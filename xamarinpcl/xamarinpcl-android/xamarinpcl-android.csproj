@@ -107,8 +107,8 @@
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="azure-mobile-services">
-      <Version>1.2.1</Version>
       <Visible>False</Visible>
+      <Version>1.2.5</Version>
     </XamarinComponentReference>
   </ItemGroup>
 </Project>
