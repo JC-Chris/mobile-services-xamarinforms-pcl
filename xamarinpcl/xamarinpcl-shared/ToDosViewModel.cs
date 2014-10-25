@@ -11,17 +11,21 @@ using System.Collections.ObjectModel;
 
 namespace xamarinpclshared
 {
+    
     public class ToDosViewModel : INotifyPropertyChanged
     {
         public ToDosViewModel()
         {
             ToDos = new ObservableCollection<ToDoViewModel>();
 
-            this.RefreshCommand = new Command(async(nothing) => {
+            this.RefreshCommand = new Command(async(nothing) => 
+            {
+                IsUpdating = true;
                 var incomplete = await Common.GetIncompleteItems().ToListAsync();
                 ToDos.Clear();
                 foreach(var item in incomplete)
                     ToDos.Add(new ToDoViewModel { ToDoItem = item });
+                IsUpdating = false;
             });
 
             this.AddCommand = new Command<string>(async (nothing) => 
@@ -35,6 +39,16 @@ namespace xamarinpclshared
         public ICommand RefreshCommand { get; set; }
         public ICommand AddCommand { get; set; }
 
+        private bool _isUpdating;
+        public bool IsUpdating 
+        { 
+            get { return _isUpdating; }
+            set
+            {
+                _isUpdating = value;
+                OnPropertyChanged("IsUpdating");
+            }
+        }
 
         public ObservableCollection<ToDoViewModel> ToDos{ get; set; }
 

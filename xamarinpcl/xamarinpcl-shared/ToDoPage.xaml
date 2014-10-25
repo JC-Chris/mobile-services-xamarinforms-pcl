@@ -18,6 +18,7 @@
 			<Button Text="Add" BorderColor="Black" BorderWidth="1"
 				Command="{Binding AddCommand}" />
 		</StackLayout>
+		<ActivityIndicator IsVisible="{Binding IsUpdating}" IsRunning="True" />
 		<ListView ItemsSource="{Binding ToDos}">
 			<ListView.ItemTemplate>
 		      <DataTemplate>
