@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using Xamarin.Forms;
+using xamarinpclshared;
 
 namespace xamarinpcl
 {
@@ -14,6 +16,20 @@ namespace xamarinpcl
 	{
 		// class-level declarations
 		public override UIWindow Window {get; set;}
+
+        public override bool FinishedLaunching(UIApplication application, NSDictionary options)
+        {
+            Forms.Init();
+            Window = new UIWindow(UIScreen.MainScreen.Bounds);
+            ShowToDoPage();
+            return true;
+        }
+
+        private void ShowToDoPage()
+        {
+            Window.RootViewController = App.GetToDoPage().CreateViewController();
+            Window.MakeKeyAndVisible();
+        }
 	}
 }
 

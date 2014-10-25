@@ -7,12 +7,11 @@ using Xamarin.Forms;
 
 namespace xamarinpclshared
 {
-    public partial class ToDoPage
+    public class App
     {
-        public ToDoPage()
+        public static Page GetToDoPage()
         {
-            InitializeComponent();
-            BindingContext = new ToDosViewModel();
+            return new ToDoPage();
         }
     }
 }
