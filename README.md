@@ -1,3 +1,22 @@
+Azure Mobile Services + Xamarin.Forms PCL
+=======================================
+
+In the original repo, Paul walks you through the steps to move mobile services code into a shared PCL project.  The original instructions are below.
+
+Seeing this project, the next obvious move seemed to be sharing the UI using Xamarin.Forms and that is what I have done in this fork.  The steps were pretty simple since Paul had already done the heavy lifting.
+
+### Step 1 - Update the existing libraries
+After pulling down the repo, the first thing I did was run all the package updates and make sure that everything was still running on all the platforms.
+
+### Step 2 - Include Xamarin.Forms
+Next, was simply pulling in the Xamarin.Forms NuGet and create an initial XAML page that will eventually hold the shared UI.  I also decided to have the PCL use NuGet versions of Azure and Newtonsoft.JSON rather than the referenced assemblies from other projects.
+
+### Step 3 - Build out the Shared UI
+Next up was building out an actual page in XAML and referencing it from the individual projects.  This was definitely the most time consuming part, but ultimately it wasn't too bad.  With that done, a Xamarin.Forms version of the PCL is done!
+
+Please checkout the repo steps for more details.  Enjoy!
+
+
 Mobile Services + Xamarin + PCL
 ===========================
 
