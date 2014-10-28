@@ -108,7 +108,7 @@ Global
 		{9B65BD76-FBBC-44D3-B52C-DEE2B719871D}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = xamarinpcl-ios\xamarinpcl-ios.csproj
+		StartupItem = xamarinpcl-android\xamarinpcl-android.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
