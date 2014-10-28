@@ -113,15 +113,6 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="QSTodoListViewController.cs" />
-    <Compile Include="QSTodoListViewController.designer.cs">
-      <DependentUpon>QSTodoListViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QSTodoService.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <InterfaceDefinition Include="MainStoryboard_iPhone.storyboard" />
-    <InterfaceDefinition Include="MainStoryboard_iPad.storyboard" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
